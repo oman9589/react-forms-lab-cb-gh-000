@@ -4,7 +4,9 @@ class PoemWriter extends React.Component {
   constructor() {
     super();
 
-    this.state = {};
+    this.state = {
+      poem: ''
+    };
   }
 
   render() {
@@ -13,11 +15,10 @@ class PoemWriter extends React.Component {
         <textarea 
           rows="3" 
           cols="60" 
-        />
+          value={this.state.value}/>
         <div 
           id="poem-validation-error" 
-          style={{color: 'red'}}
-        >
+          style={{color: 'red'}}>
           This poem is not written in the right structure!
         </div>
       </div>
