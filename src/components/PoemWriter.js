@@ -13,7 +13,7 @@ class PoemWriter extends React.Component {
   evaluatePoem = () => {
     String.prototype.lines = () => { return this.split(/\r*\n/); }
     String.prototype.lineCount = () => { return this.lines().length; }
-    if (this.lineCount === 3) {
+    if (this.lineCount() === 3) {
       this.setState({
         ...this.state,
         isValid: true
