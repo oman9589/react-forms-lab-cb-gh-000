@@ -13,7 +13,7 @@ class LoginForm extends React.Component {
   handlePasswordChange = (event) => {
     this.setState({
       ...this.state,
-      usr: 'event.target.value'
+      usr: event.target.value
     })
   }
 
