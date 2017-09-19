@@ -24,6 +24,12 @@ class LoginForm extends React.Component {
     })
   }
 
+  handleSubmit = (event) => {
+    if (this.state.usr.length > 0 && this.state.pw.length > 0) {
+      return this.props.onSubmit
+    }
+  }
+
   render() {
     return (
       <form>
