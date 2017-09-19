@@ -17,6 +17,9 @@ class PoemWriter extends React.Component {
     var lines = this.state.poem.split(/\r|\r\n|\n/);
     var count = lines.length;
     if (count === 3) {
+      if (lines[0].split(' ').length === 5 &&
+          lines[1].split(' ').length === 3 &&
+          lines[2].split(' ').length === 5)
       this.setState({
         isValid: true
       });
