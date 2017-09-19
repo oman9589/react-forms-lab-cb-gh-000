@@ -3,11 +3,11 @@ import React from 'react';
 
 class PoemWriter extends React.Component {
 
-  countWords(line) {
+  countWords = (line) => {
     return line.split(' ').filter(l => l).length;
   }
 
-  isValidPoem(poem) {
+  isValidPoem = (poem) => {
     const poemLines = poem.split('\n').filter(l => l);
     const isRightAmountOfLines = poemLines.length === 3;
     const hasRightAmountOfWords = countWords(poemLines[0]) === 5 && countWords(poemLines[1]) === 3 && countWords(poemLines[2]) === 5;
