@@ -19,14 +19,15 @@ class PoemWriter extends React.Component {
     if (count === 3) {
       if (lines[0].split(' ').length === 5 &&
           lines[1].split(' ').length === 3 &&
-          lines[2].split(' ').length === 5)
-      this.setState({
-        isValid: true
-      });
-    } else {
-      this.setState({
-        isValid: false
-      });
+          lines[2].split(' ').length === 5) {
+        this.setState({
+          isValid: true
+        });
+      } else {
+        this.setState({
+          isValid: false
+        });
+      }
     }
   }
 
