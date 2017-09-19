@@ -15,7 +15,7 @@ class PoemWriter extends React.Component {
       ...this.state,
       poem: event.target.value
     })
-    if (this.state.value.match(/\n/g).length + 1 === 3) {
+    if (this.state.value.match(/\r*\n/).length + 1 === 3) {
       this.setState({
         ...this.state,
         isValid: true
