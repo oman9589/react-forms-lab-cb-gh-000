@@ -11,7 +11,7 @@ class PoemWriter extends React.Component {
   }
 
   evaluatePoem = () => {
-    lines = () => { return this.split(/\r*\n/); }
+    const lines = () => { return this.split(/\r*\n/); }
     lineCount = () => { return this.lines().length; }
     if (this.lines().length == 3) {
       this.setState({
