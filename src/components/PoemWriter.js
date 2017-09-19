@@ -27,7 +27,7 @@ class PoemWriter extends React.Component {
     if(event.target.value) {
       this.setState({
         poem: event.target.value,
-        isValid: isValidPoem()
+        isValid: this.isValidPoem()
       });
     }
   }
