@@ -19,7 +19,7 @@ class PoemWriter extends React.Component {
 
     this.state = {
       poem: '',
-      isValid: this.isValidPoem()
+      isValid: false
     };
   }
 
