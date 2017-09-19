@@ -10,25 +10,17 @@ class PoemWriter extends React.Component {
     };
   }
 
+  function isValidPoem(poem) {
+    const poemLines = poem.split('\n').filter(l => l);
+    const isRightAmountOfLines = poemLines.length === 3;
+    const hasRightAmountOfWords = countWords(poemLines[0]) === 5 && countWords(poemLines[1]) === 3 && countWords(poemLines[2]) === 5;
+    return isRightAmountOfLines && hasRightAmountOfWords;
+  }
+
   evaluatePoem = (event) => {
     this.setState({
       poem: event.target.value
     });
-    var lines = this.state.poem.split(/\r|\r\n|\n/);
-    var count = lines.length;
-    if (count === 3) {
-      if (lines[0].split(' ').length === 5 &&
-          lines[1].split(' ').length === 3 &&
-          lines[2].split(' ').length === 5) {
-        this.setState({
-          isValid: true
-        });
-      } else {
-        this.setState({
-          isValid: false
-        });
-      }
-    }
   }
 
   render() {
