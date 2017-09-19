@@ -19,7 +19,7 @@ class PoemWriter extends React.Component {
     var count = lines.length;
     if (count === 3) {
       this.setState({
-       isValid: true
+        isValid: true
       });
     } else {
       this.setState({
