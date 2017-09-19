@@ -1,16 +1,18 @@
 import React from 'react';
 
+
 class PoemWriter extends React.Component {
+
+  isValidPoem(poem) {
+    const poemLines = poem.split('\n').filter(l => l);
+    const isRightAmountOfLines = poemLines.length === 3;
+    const hasRightAmountOfWords = countWords(poemLines[0]) === 5 && countWords(poemLines[1]) === 3 && countWords(poemLines[2]) === 5;
+    return isRightAmountOfLines && hasRightAmountOfWords;
+  }
+  
   constructor() {
     super();
 
-    isValidPoem(poem) {
-      const poemLines = poem.split('\n').filter(l => l);
-      const isRightAmountOfLines = poemLines.length === 3;
-      const hasRightAmountOfWords = countWords(poemLines[0]) === 5 && countWords(poemLines[1]) === 3 && countWords(poemLines[2]) === 5;
-      return isRightAmountOfLines && hasRightAmountOfWords;
-    }
-    
     this.state = {
       poem: '',
       isValid: this.isValidPoem(poem)
