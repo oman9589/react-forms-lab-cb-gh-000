@@ -4,7 +4,9 @@ class TwitterMessage extends React.Component {
   constructor() {
     super();
 
-    this.state = {};
+    this.state = {
+      numChars: 0
+    };
   }
 
   render() {
@@ -12,6 +14,7 @@ class TwitterMessage extends React.Component {
       <div>
         <strong>Your message:</strong>
         <input type="text" />
+        <p>
       </div>
     );
   }
