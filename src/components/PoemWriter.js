@@ -15,6 +15,7 @@ class PoemWriter extends React.Component {
       ...this.state,
       poem: event.target.value
     });
+    
     var lines = this.state.poem.split(/\r|\r\n|\n/);
     var count = lines.length;
     if (count === 3) {
