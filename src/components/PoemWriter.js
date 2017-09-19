@@ -9,7 +9,7 @@ class PoemWriter extends React.Component {
       isValid: false
     };
   }
-  
+
   evaluatePoem = () => {
     String.prototype.lines = function() { return this.split(/\r*\n/); }
     String.prototype.lineCount = function() { return this.lines().length; }
@@ -22,7 +22,7 @@ class PoemWriter extends React.Component {
           rows="3"
           cols="60"
           value={this.state.poem}
-          onChange={evaluatePoem}/>
+          onChange={this.evaluatePoem}/>
         <div
           id="poem-validation-error"
           style={{color: 'red'}}>
