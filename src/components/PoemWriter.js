@@ -6,7 +6,7 @@ class PoemWriter extends React.Component {
 
     this.state = {
       poem: '',
-      isValid: isValidPoem(poem)
+      isValid: this.isValidPoem(poem)
     };
   }
 
