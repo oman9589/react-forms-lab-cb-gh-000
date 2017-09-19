@@ -18,11 +18,11 @@ class PoemWriter extends React.Component {
 
     var lines = this.state.poem.split(/\r|\r\n|\n/);
     var count = lines.length;
-    // if (count === 3) {
-    //   this.setState({
-    //     ...this.state,
-    //     isValid: true
-    //   });
+    if (count === 3) {
+      this.setState({
+        ...this.state,
+       isValid: true
+      });
     // } else {
     //   this.setState({
     //     ...this.state,
