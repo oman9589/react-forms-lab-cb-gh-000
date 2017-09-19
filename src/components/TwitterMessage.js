@@ -5,12 +5,14 @@ class TwitterMessage extends React.Component {
     super();
 
     this.state = {
-      value: ''
+      chars: 0
     };
   }
 
   handleChange = () => {
-
+    this.setState({
+      value.
+    })
   }
 
   render() {
@@ -18,7 +20,7 @@ class TwitterMessage extends React.Component {
       <div>
         <strong>Your message:</strong>
         <input type="text" onChange={this.handleChange} value={this.state.value} />
-        <p>{this.props.maxChars - this.state.value.lenth} chars left</p>
+        <p>{this.props.maxChars - this.state.chars} chars left</p>
       </div>
     );
   }
