@@ -20,7 +20,7 @@ class PoemWriter extends React.Component {
         <div
           id="poem-validation-error"
           style={{color: 'red'}}>
-          {isValid ? '','This poem is not written in the right structure!'}
+          {isValid ? '' 'This poem is not written in the right structure!'}
         </div>
       </div>
     );
