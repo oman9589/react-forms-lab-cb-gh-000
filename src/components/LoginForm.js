@@ -10,13 +10,23 @@ class LoginForm extends React.Component {
     };
   }
 
+  handlePasswordChange = (event) => {
+    this.setState({
+      ...this.state,
+      usr: 'event.target.value'
+    })
+  }
+
   render() {
     return (
       <form>
         <div>
           <label>
             Username
-            <input id="test-username" type="text" />
+            <input id="test-username"
+            type="text"
+            value={this.state.usr}
+            onChange={this.handlePasswordChange}/>
           </label>
         </div>
         <div>
