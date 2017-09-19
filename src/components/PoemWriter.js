@@ -10,7 +10,7 @@ class PoemWriter extends React.Component {
   isValidPoem = (poem) => {
     const poemLines = poem.split('\n').filter(l => l);
     const isRightAmountOfLines = poemLines.length === 3;
-    const hasRightAmountOfWords = this.countWords(poemLines[0]) === 5 && this.countWords(poemLines[1]) === 3 && countWords(poemLines[2]) === 5;
+    const hasRightAmountOfWords = this.countWords(poemLines[0]) === 5 && this.countWords(poemLines[1]) === 3 && this.countWords(poemLines[2]) === 5;
     return isRightAmountOfLines && hasRightAmountOfWords;
   }
 
