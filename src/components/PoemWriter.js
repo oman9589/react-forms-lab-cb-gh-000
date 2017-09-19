@@ -28,7 +28,7 @@ class PoemWriter extends React.Component {
     //     ...this.state,
     //     isValid: false
     //   });
-    }
+    //}
   }
 
   render() {
