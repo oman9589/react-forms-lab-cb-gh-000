@@ -49,7 +49,7 @@ class PoemWriter extends React.Component {
           cols="60"
           value={this.state.poem}
           onChange={this.evaluatePoem}/>
-        {this.state.isValid ? (<div
+        {!this.state.isValid ? (<div
           id="poem-validation-error"
           style={{color: 'red'}}>
           This poem is not written in the right structure!
