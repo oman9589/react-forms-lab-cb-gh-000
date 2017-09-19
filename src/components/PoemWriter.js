@@ -24,10 +24,10 @@ class PoemWriter extends React.Component {
        isValid: true
       });
     } else {
-      this.setState({
-       ...this.state,
-       isValid: false
-      });
+      // this.setState({
+      //  ...this.state,
+      //  isValid: false
+      // });
     }
   }
 
